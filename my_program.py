@@ -48,3 +48,24 @@ student_grades_dict = {
     "Sim": 2.3,
     "Tammy": 10
 }
+
+#if I had to sum the values of my dictionary together, I would say something like this
+
+mysum = sum(student_grades_dict.values()) #values is a method and sum is function
+print(mysum)
+
+#What makes a programmer a programmer
+#nknowing syntax, data structures and algorithms
+
+#Tuples are like lists but syntax used is parenthesis
+tuesday_temp = (1,2,3)
+#what is the true importance of the tuples, they do not have many methods that can mutate and manipulate them
+monday_temperatures = [9.1,8.8,7.5]
+
+#more operations with lists
+#accessing items with bracket notation works here too
+monday_temperatures[1] #finding the value in the list at the index of 1
+
+#slicing has a different syntax in python
+monday_temperatures[1:4] # with the numbers making reference to indices of list items
+monday_temperatures[0:] #this is the slicing to the end of the list
