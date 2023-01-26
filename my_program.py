@@ -216,3 +216,111 @@ def foo(lst):
     return sum([float(i) for i in lst])
 
     #functions with multiple arguments/parameters
+
+#having a number of different arguments will look like
+#def function_name(*args):
+#    return args
+
+def capitalize(*args):
+    capitalization = [item.upper() for item in args]
+    return sorted(capitalization)
+
+#reading text from a file
+file = open("bear.txt")
+print(file.read())
+
+#some way to open files and then close them
+
+myfile = open("file.txt")
+content = myfile.read()
+
+myfile.close()
+print(content) #this will work as the file is now stored in the variable and made reference to the variable
+#instead of using the above, you should read text files in the following way below
+
+with open("fruits.txt") as myfile: #myfile in this instance is variable placeholder for 
+    cotent = myfile.read()
+
+file = open("bear.txt")
+content = file.read()
+file.close()
+print(content[:90])
+
+def lets_do_this(n):
+    if n.mod(3) != 0:
+        return "Weird"
+    elif n.mod(2) == 0 and (n>=2 and n<=5):
+        return "Not weird"
+    elif n.mod(2) == 0 and (n>=6 and n<=20):
+        return "Weird"
+    elif n.mod(2) == 0 and n <20:
+        return "Not Weird"
+
+def two_numbers(a,b):
+    print(a+b)
+    print(a-b)
+    print(a*b)
+
+
+def more_practice(a,b):
+    print(a//b)
+    print(a/b)
+
+def loops_prac(n):
+    for i in range(0,n):
+        print(i*i)
+
+def leap_year(year):
+    if year%4 == 0:
+        return True
+    else:
+        return False
+
+def looping(num):
+    for i in range(1, num+1):
+        print(i, end="")
+
+def checking_runner_up(arr):
+    winner = max(arr)
+
+    count_for_winner = arr.count(winner)
+
+    for i in count_for_winner:
+        arr.remove(winner)
+    
+    runner_up = max(arr)
+    print(runner_up)
+
+
+    dic = {}
+    score_list = list()
+
+    name = input()
+    score = float(input())
+    
+    if score in dic:
+        dic[score].append(name)
+    else:
+        dic[score] = name #this is assigning the key value pair
+    if score not in score_list:
+        score_list.append(score)
+
+    lowest = min(score)
+    score_list.remove(lowest)
+    new_low = min(score)
+    dic[new_low].sort()
+
+    for i in dic[new_low]:
+        print(i)
+
+    for i in student_marks[query_name]:
+        s=s+i
+        print("{0:.2f}".format(s/3))
+
+
+#ZERO TO MASTERY  COURSE
+#formated strings
+
+name = "Tammy"
+age = 55
+print(f"hi {name}. You are {age} years old")
