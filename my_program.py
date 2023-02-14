@@ -313,9 +313,9 @@ def checking_runner_up(arr):
     for i in dic[new_low]:
         print(i)
 
-    for i in student_marks[query_name]:
-        s=s+i
-        print("{0:.2f}".format(s/3))
+    # for i in student_marks[query_name]:
+    #     s=s+i
+    #     print("{0:.2f}".format(s/3))
 
 
 #ZERO TO MASTERY  COURSE
@@ -324,3 +324,99 @@ def checking_runner_up(arr):
 name = "Tammy"
 age = 55
 print(f"hi {name}. You are {age} years old")
+
+#when we look at string indexing in python, we have a [start:stop:step over]
+#len() counts from one
+
+#booleans
+
+name = "Tammy"
+is_cool = True
+
+is_cool = False
+
+ #fundamental data typesd are
+ # bool, int , float , complex , str , list , tuple , set , dict
+
+ #This is a password checker exercise using user input
+
+username = input("What is your username")
+password = input("What is your password")
+
+password_length = len(password)
+password_print = "*" * password_length
+
+print(f"{username}, password {password_print} is {password_length} letters long")
+
+#LISTSSSSSSSSS => one of the important data type, a list of ordered data types , it can have any collection of items that we want
+
+li = [1,2,3,4,5]
+li2 = ['a', 'b','c']
+li3 = [1,2,'a', True]
+
+#Data Structure is the organization of data to be used with different pros and cons  
+
+#Lets look at list slicing
+#we had something like this
+string = "hellloooooo"
+string[0:2:1] # string[start:stop:step]
+
+amazon_cart = [
+    "notebooks",
+    "sunglasses",
+    "toys",
+    "grapes"
+]
+#wuth slicing, we are creating a copy of the list and can essentially assign it to a new var
+
+amazon_cart[0] = "laptop"
+new_cart = amazon_cart[:] #this is syntax that makes a copy instead of assigning a completely new spot in memory
+new_cart[0] = "gum"
+print(new_cart)
+print(amazon_cart)
+
+#MATRIXXXX => An array with another array inside of it, or list with another list inside of it
+
+matrix = [  #also known as a two dimensional array
+    [1,2,3],
+    [2,4,6],
+    [7,8,9]
+]
+
+#lets look at LIST METHOOOODDDSSSS
+
+basket = [1,2,3,4,5]
+print(len(basket)) #5
+
+#lets look at adding methods ____________________
+print(basket.append(100))
+
+basket.insert(4,100) #the first parameter makes reference to the index at which the item is to be inserted ; only modifies the list and does not output a new list
+basket.extend(100) #adds to the end of our list, literally extends our list
+
+#lets look at removing methods _____________________
+basket.pop() #it pops off the last element in the list if called without an index ; pop also returns the thing that we removed
+basket.remove(7) #insert the index that we want to remove
+basket.clear #removes whatever is in the list
+
+
+basket.index(4) #asking where the index of something is and will return the index of that item
+#basket.index(what I am looking for , start index , stop index)
+print(basket.count(1)) # we will get an output of 1 because the refered to item exists ONCE in our list, it returns numbe rof times item is found in our list
+
+#last couple of methods
+basket.sort() #a method that sorts a list || REMEMBER THAT THERE IS A DIFFERENCE BETWEEN METHODS AND BUILT IN FUNCTIONS
+basket.reverse() # gives everything the opposite index, it reverses our list 
+
+#LETS TALK ABOUT RANGEEEEE
+print(list(range(1,100)))
+#.join() is a string method <- it takes in an iterable
+
+#LIST UNPACKING and how it looks
+
+a,b,c , *other = [1,2,3,4,5,6,7,8,9]
+
+print(a)
+print(b)
+print(c)
+print(other) #=> it prints the remainder of the list omg mind blowwwwwnnn
