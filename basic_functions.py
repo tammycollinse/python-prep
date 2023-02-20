@@ -134,3 +134,15 @@ for item in picture:
     elif char == 0:
       print(" ", end ='')
   print('') #this was pretty cool, it made a christmas tree
+
+  #exercise: check for duplicates in this list
+
+  some_list = ["a", 'b', "c" , 'd' , 'm' , 'n', 'n']
+  duplicates = []
+
+  for item in some_list:
+      if some_list.count(item) > 1:
+          if value not in duplicates:
+              duplicates.appened(item)
+
+  print(duplicates)
