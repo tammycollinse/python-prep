@@ -420,3 +420,33 @@ print(a)
 print(b)
 print(c)
 print(other) #=> it prints the remainder of the list omg mind blowwwwwnnn
+
+def test(a):
+    '''
+    This is known as a doc string that provides information about our function and we can call it like this
+    '''
+
+print(test.__doc__) #This will print out that docstring that is written in our function
+
+
+#lets talk about clean code
+def is_even_or_odd(num):
+    if num%2 == 0:
+        return True
+    elif num%2 != 0:
+        return False #this is okay considering the method and thinking that one would go through, but the solution below is the cleaner version
+
+#writing this function with cleaner code everyday
+def cleanup(num):
+    return num%2 == 0
+
+def super_func(*args, **kwargs): #lets lok at args and kwargs
+    total = 0
+    for items in kwargs.values():
+        total += items
+    return sum(args) + total_price
+
+print(super_func(1,2,3,4,5, num1=20 , num2=20))
+#There is a rule concerning this, params, *args, default parameters, **kwargs
+
+#lets have a look at the walrus operator

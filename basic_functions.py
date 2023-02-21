@@ -146,3 +146,41 @@ for item in picture:
               duplicates.appened(item)
 
   print(duplicates)
+
+  #whoooohooo FUNCTIONS, we use the keyword def to define our functions
+
+  def say_hello():
+    print('hello')
+
+say_hello() #=> this is function invokation, functions are important in order to write dry and efficient code
+
+#You know the power of parameters and arguments
+
+def say_hello(name, surname):
+    print(f"Hi there,{name} {surname}! It is so great to meet you!")
+
+#Lets look at positional arguments. the place valye of the argumenet is important when we are invoking the function
+#Then we also have keyword arguments that are given a value UPON invokation, whereas default parameters are giving in the function scope when we write our function
+
+#Lets have a look at return as a concept in python 
+def sum(num1,num2):
+    total = num1 + num2
+    return total #return signals the exit of a function , an output is called a side effect but there is a difference between side effects and return values
+
+# def check_driver_age(age):
+#     if int(age) < 18:
+#   	    print("Sorry, you are too young to drive this car. Powering off")
+#     elif int(age) > 18:
+#         print("Powering On. Enjoy the ride!")
+#     elif int(age) == 18:
+#   	    print("Congratulations on your first year of driving. Enjoy the ride!")
+
+#Lets talk about the differences between methods and functions in py
+list()
+print()
+max()
+min()
+input() #these are all functions, they need to passed something into them
+
+#methods need to be called ON something, it needs an owner.
+
