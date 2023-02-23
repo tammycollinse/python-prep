@@ -450,3 +450,8 @@ print(super_func(1,2,3,4,5, num1=20 , num2=20))
 #There is a rule concerning this, params, *args, default parameters, **kwargs
 
 #lets have a look at the walrus operator
+
+a = "helooooooooooo"
+
+if ((n :=len(a)) > 10):
+    print(f"too long {n} elements") #we can assign statements to variables as part of a bigger expression
