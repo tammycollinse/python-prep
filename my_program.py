@@ -455,3 +455,90 @@ a = "helooooooooooo"
 
 if ((n :=len(a)) > 10):
     print(f"too long {n} elements") #we can assign statements to variables as part of a bigger expression
+
+#Lets talk about python formatting PEP, tells us what good python code looks like
+
+#What is object oriented programming? OOP
+#objects have methods and attributes that we can access with our dot notation, everything in python is an object
+#oop is described as a paradigm, it means essentially that it follows a standard so that our code is more manageable and easier to write, manage and organize
+#think of a modular design
+
+#we can think in models to imitate real life things and processes. i can create my own data type using the class keyword
+
+#we have classes => instantiate => instances (these are objects)
+
+class BigObject: #This is our class
+    pass
+
+obj1 = BigObject() #this is where we would instanciate our class, use our BigObject class to create an object
+
+class PlayerCharacter:
+    #having another attribute that looks like as follows
+    membership = True #this is a static attribute that all instances will get, not dynamic , class obj attribute (this is when there will be no chance across instances  )
+    def __init__(self, name, age): #this is a dunder method, constructor method
+        self.name = name
+        self.age = age
+    
+    def run(self):
+        print("run")
+
+player1 = PlayerCharacter("Cindy") #this is instantiating our class into an instancxe (obj)
+#what is the self keyword? it is making reference to the instance that we have named
+player2 = PlayerCharacter("Tom")
+
+print(player1.name)
+print(player2.name)
+print(player1.run())
+
+#These different players are made using the same blueprint and stored in different locations in memory
+
+class Cat:
+    species = 'mammal'
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+# Instantiate the Cat object with 3 cats
+peanut = Cat("Peanut", 3)
+garfield = Cat("Garfield", 5)
+snickers = Cat("Snickers", 1)
+
+
+# Find the oldest cat
+def get_oldest_cat(*args):
+    return max(args)
+
+
+# Output
+
+print(f"The oldest cat is {get_oldest_cat(peanut.age, garfield.age, snickers.age)} years old.")
+
+@classmethod
+def adding_things(cls , num1 , num2):
+    return num1+ num2
+
+#This is what we have learned so far
+
+class NameOfClass():
+    class_attribute = "value"
+    def __init__(self , param1 , param2):
+        self.param1 = param1
+        self.param2 = param2
+    
+    def method(self):
+        #code 
+    
+    @classmethod
+    def cls_method(cls , param1 , param2):
+        #code
+
+    @staticmethod
+    def stc_method(param1 , param2  ):
+     #code
+
+#there are FOUR PILLARS OF OOP
+#what is encapsulation
+
+#it is the combination of data structures and attributes, grouping them by function and properties
+#what is abstraction, hiding away information and only highlight information that the user is concerned about
