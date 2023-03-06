@@ -527,18 +527,21 @@ class NameOfClass():
         self.param2 = param2
     
     def method(self):
+        pass
         #code 
     
-    @classmethod
-    def cls_method(cls , param1 , param2):
-        #code
+    # @classmethod
+    # def cls_method(cls , param1 , param2):
+    #     #code
 
-    @staticmethod
-    def stc_method(param1 , param2  ):
+    # @staticmethod
+    # def stc_method(param1 , param2  ):
      #code
 
 #there are FOUR PILLARS OF OOP
-#what is encapsulation
+#what is encapsulation  
+#the biniding of functions and data that are essentially related, think of the modular design of things. It is like packaging functionality in a blue print
+#Think of encapsulation as building by association
 
-#it is the combination of data structures and attributes, grouping them by function and properties
-#what is abstraction, hiding away information and only highlight information that the user is concerned about
+
+
