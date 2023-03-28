@@ -543,5 +543,44 @@ class NameOfClass():
 #the biniding of functions and data that are essentially related, think of the modular design of things. It is like packaging functionality in a blue print
 #Think of encapsulation as building by association
 
+#what is abstraction
+#hiding information and only giving appropriate parties access to relevant information 
+#dunder methods and naming conventions with private and public variables
+
+#WHAT IS INHERITANCE
+
+class User():
+    def __init__(self, email):
+        self.email = email
+
+    def sign_in(self):
+        print("you are logged in")
+
+class Wizard(User): #you can pass a class into other classes using inheritance, it inherits the methods from the User class
+    def __init__(self,name, power, email):
+        User.__init__(self , email) #this is how we pass an init method to be inhertited // super().__init__(email)
+        self.name = name
+        self.power = power
+    def attack(self):
+        print(f"This is the wizard attacking with the power of {self.power}")
+
+class Archer(User):
+    def __init__(self, name, arrows):
+        self.name = name
+        self.arrows = arrows
+    def attack(self):
+        print(f"This is the archer attacking with arrows. Number of arrows left - {self.arrows}")
+
+
+#isinstance is used like: isinstance(instance , class to be checked)
+
+#POLYMORPHISM 
+# object classes can share the same method name but act differently depending on which instance calls it
+
+class Toy():
+    def __init__(self, color , age):
+        self.color = color
+        self. age = age
+
 
 
